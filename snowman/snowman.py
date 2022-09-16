@@ -76,7 +76,8 @@ def get_letter_from_user(word_dict, wrong_letters):
 def build_word_dict(word):
     word_dict = {}
     for letter in word:
-        word_dict[letter] = False
+        if letter.isalpha():
+            word_dict[letter] = False
 
     return word_dict
 
